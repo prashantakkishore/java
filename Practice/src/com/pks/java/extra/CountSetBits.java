@@ -1,4 +1,4 @@
-package com.pks.ds.extra;
+package com.pks.java.extra;
 
 public class CountSetBits {
 
