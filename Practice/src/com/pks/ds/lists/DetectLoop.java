@@ -1,7 +1,6 @@
 package com.pks.ds.lists;
 
 import java.util.HashSet;
-import java.util.LinkedList;
 
 public class DetectLoop {
 	
