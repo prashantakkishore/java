@@ -1,4 +1,4 @@
-package com.pks.java.producer_consumer;
+package com.pks.java.design_patterns.producer_consumer;
 
 public class PCTestWaitNotify {
 

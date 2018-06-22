@@ -1,4 +1,4 @@
-package com.pks.java.producer_consumer.blockingQueue;
+package com.pks.java.design_patterns.producer_consumer.blockingQueue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

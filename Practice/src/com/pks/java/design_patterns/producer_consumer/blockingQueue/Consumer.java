@@ -1,25 +1,24 @@
-package com.pks.java.producer_consumer.blockingQueue;
+package com.pks.java.design_patterns.producer_consumer.blockingQueue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class Producer implements Runnable {
+class Consumer implements Runnable {
 
 	private final BlockingQueue sharedQueue;
 
-	public Producer(BlockingQueue sharedQueue) {
+	public Consumer(BlockingQueue sharedQueue) {
 		this.sharedQueue = sharedQueue;
 	}
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 10; i++) {
+		while (true) {
 			try {
-				System.out.println("Produced: " + i);
-				sharedQueue.put(i);
+				System.out.println("Consumed: " + sharedQueue.take());
 			} catch (InterruptedException ex) {
-				Logger.getLogger(Producer.class.getName()).log(Level.SEVERE,
+				Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE,
 						null, ex);
 			}
 		}
