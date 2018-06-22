@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * The span Si of the stock’s price on a given day i is defined as the maximum
+ * The span Si of the stockï¿½s price on a given day i is defined as the maximum
  * number of consecutive days just before the given day, for which the price of
  * the stock on the current day is less than or equal to its price on the given
  * day. For example, if an array of 7 days prices is given as {100, 80, 60, 70,
@@ -16,6 +16,7 @@ import java.util.Stack;
  */
 
 public class StockSpan {
+	
 	// a linear time solution for stock span problem
 	// A stack based efficient method to calculate stock span values
 	static void calculateSpan(int price[], int n, int S[]) {
