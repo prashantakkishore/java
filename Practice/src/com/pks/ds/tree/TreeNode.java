@@ -28,6 +28,10 @@ public class TreeNode {
 	public void setRight(TreeNode right) {
 		this.right = right;
 	}
+
+	public boolean isLeaf() {
+		return left == null && right == null;
+	}
 	
 	
 
