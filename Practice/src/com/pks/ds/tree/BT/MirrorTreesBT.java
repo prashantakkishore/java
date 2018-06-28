@@ -1,4 +1,7 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
+
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
 
 public class MirrorTreesBT extends TreeBase{
 	

@@ -1,6 +1,9 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
 
 import java.util.Stack;
+
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
 
 /**
  * 
@@ -57,7 +60,7 @@ public class PostOrder extends TreeBase {
 
 	public static void main(String[] args) {
 		recursive(root);
-		iterative(root);
+		//iterative(root);
 	}
 
 }

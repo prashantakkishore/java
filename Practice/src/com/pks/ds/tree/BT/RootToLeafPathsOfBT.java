@@ -1,8 +1,11 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
 
 /**
  * Uses "InOrder" Traversal of BT and while traversing just saves node

@@ -1,7 +1,10 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
 
 /**
  * 

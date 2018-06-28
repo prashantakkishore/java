@@ -1,12 +1,15 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
+
 
 /**
  * This is an extension of below class.
- * @see com.pks.ds.tree.MaxWidthOfBT
+ * @see com.pks.ds.tree.BT.MaxWidthOfBT
  * 
  * Input : 
  * 			    1

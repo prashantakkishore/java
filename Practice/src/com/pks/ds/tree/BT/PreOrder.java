@@ -1,6 +1,9 @@
-package com.pks.ds.tree;
+package com.pks.ds.tree.BT;
 
 import java.util.Stack;
+
+import com.pks.ds.tree.TreeBase;
+import com.pks.ds.tree.TreeNode;
 
 /**
  * 
@@ -20,7 +23,7 @@ public class PreOrder extends TreeBase {
 
 	public static void recursive(TreeNode root) {
 		if (root != null) {
-			System.out.println(root.getData());
+			System.out.print(root.getData() + " ");
 			recursive(root.getLeft());
 			recursive(root.getRight());
 		}
