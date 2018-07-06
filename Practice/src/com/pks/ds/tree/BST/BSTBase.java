@@ -9,7 +9,7 @@ import com.pks.ds.tree.TreeNode;
 * Output : 
 *	 			    5
 *	 			 /    \
-*	 		   2	    7
+*	 		   2	    7    
 *	 		 /   \    /   \
 *	 	   1	  3	 6	   8
 *				   \		\
@@ -18,8 +18,8 @@ import com.pks.ds.tree.TreeNode;
 public class BSTBase {
 
 	public static TreeNode root;
-
-	static {
+ 
+;	static {
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		root = BuildBST.sortedArrayToBST(arr, 0, 8);
 	}

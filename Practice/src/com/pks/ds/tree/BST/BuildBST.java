@@ -16,6 +16,10 @@ import com.pks.ds.tree.BT.InOrder;
 *  					4		 9
 */
 public class BuildBST {
+	
+	public static TreeNode sortedArrayToBST(int[] arr){
+		return sortedArrayToBST(arr, 0, arr.length - 1);
+	}
 
 	public static TreeNode sortedArrayToBST(int[] arr, int start, int end) {
 
