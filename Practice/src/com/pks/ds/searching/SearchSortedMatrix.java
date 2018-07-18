@@ -1,4 +1,4 @@
-package com.pks.ds.arrays;
+package com.pks.ds.searching;
 /**
 Input : mat[4][4] = { 	{10, 20, 30, 40},
         				{15, 25, 35, 45},

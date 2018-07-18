@@ -1,4 +1,4 @@
-package com.pks.ds.arrays;
+package com.pks.ds.searching;
 
 import java.util.HashSet;
 
