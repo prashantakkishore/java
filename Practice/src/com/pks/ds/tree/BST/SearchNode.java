@@ -2,6 +2,7 @@ package com.pks.ds.tree.BST;
 
 import com.pks.ds.tree.TreeNode;
 /**
+* 		O(h) : h = height of BST
 *	 			    5
 *	 			 /    \
 *	 		   2	    7
