@@ -1,4 +1,4 @@
-package com.pks.ds.strings;
+package com.pks.ds.strings.problems;
 
 import java.util.HashMap;
 
