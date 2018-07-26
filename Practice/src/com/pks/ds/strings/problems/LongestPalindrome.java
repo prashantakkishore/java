@@ -1,4 +1,4 @@
-package com.pks.ds.strings;
+package com.pks.ds.strings.problems;
 /**
  * * Algorithm Paradigm: Dynamic Programming
  * Time complexity: O ( n^2 )

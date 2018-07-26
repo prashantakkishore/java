@@ -1,5 +1,12 @@
 package com.pks.ds.strings;
 
+/**
+ * T = Text 
+ * M = Pattern to search
+ * Time Complexity : O(M)
+ * Space Complexity : O(ALPHABET_SIZE * P * T)
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 

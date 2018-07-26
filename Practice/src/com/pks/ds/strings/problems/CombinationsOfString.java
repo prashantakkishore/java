@@ -1,4 +1,4 @@
-package com.pks.ds.strings;
+package com.pks.ds.strings.problems;
 
 public class CombinationsOfString {
 
