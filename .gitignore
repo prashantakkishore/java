@@ -1,3 +1,5 @@
 **/bin
 **/.metadata
 **/.recommenders
+/JavaWebSocket/nbproject/private/
+/JavaWebSocket/build/
