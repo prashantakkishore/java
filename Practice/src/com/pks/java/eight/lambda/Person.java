@@ -14,6 +14,10 @@ public class Person {
 	public  Person() {
 		
 	}
+	
+	public  Person(String name) {
+		this.name = name;
+	}
 
 	public Person(String name, LocalDate birthday, Sex gender, String emailAddress) {
 		super();
@@ -49,6 +53,10 @@ public class Person {
 	
 	public int compareByName(Person a, Person b) {
 		return a.name.compareTo(b.name);
+	}
+	
+	public int compareByNameParam(Person b) {
+		return this.name.compareTo(b.name);
 	}
 	
 	public static boolean isAgeMoreThan25(Person person) {
