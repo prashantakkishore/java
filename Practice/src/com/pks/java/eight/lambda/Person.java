@@ -32,6 +32,14 @@ public class Person {
 	Sex gender;
 	String emailAddress;
 
+	public Sex getGender() {
+		return gender;
+	}
+
+	public void setGender(Sex gender) {
+		this.gender = gender;
+	}
+
 	public int getAge() {
 		return birthday.until(LocalDate.now()).getYears();
 	}
