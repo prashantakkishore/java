@@ -2,7 +2,6 @@
 A class diagram in the UML is a type of static structure diagram that describes the structure of a system by showing the system's classes, their attributes, operations (or methods), and the relationships among objects.
 
 ## Members
----
 
 ### Visibility
 
@@ -18,7 +17,7 @@ A class diagram in the UML is a type of static structure diagram that describes 
 - Instance members - Instance member of a class.
 
 ## Relationships
----
+
 ![Alt text](images/uml_class_relation_arrows.png?raw=true "Relationships")
 
 ### Instance-level relationships
@@ -65,6 +64,7 @@ A class diagram in the UML is a type of static structure diagram that describes 
 
 #### Generalization/Inheritance
 Inheritance.
+
 ![Alt text](images/generalization.png?raw=true "Relationships")
 
 #### Realization/Implementation
@@ -75,8 +75,19 @@ a relationship between two model elements, in which one model element (the clien
 ### All together
 ![Alt text](images/uml_class_diagram_all_together.png?raw=true "Relationships")
 
+- Shape is an abstract class. It is shown in Italics.
+- Shape is a superclass. Circle, Rectangle and Polygon are derived from Shape. In other words, a Circle is-a Shape. This is a generalization / inheritance relationship.
+- There is an association between DialogBox and DataController.
+- Shape is part-of Window. This is an aggregation relationship. Shape can exist without Window.
+- Point is part-of Circle. This is a composition relationship. Point cannot exist without a Circle.
+- Window is dependent on Event. However, Event is not dependent on Window.
+- The attributes of Circle are radius and center. This is an entity class.
+- The method names of Circle are area(), circum(), setCenter() and setRadius().
+- The parameter radius in Circle is an in parameter of type float.
+- The method area() of class Circle returns a value of type double.
+- The attributes and method names of Rectangle are hidden. Some other classes in the diagram also have their attributes and method names hidden.
+
 ## References
----
 
 https://en.wikipedia.org/wiki/Class_diagram#Dependency
 
