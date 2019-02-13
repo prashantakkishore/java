@@ -1,3 +1,14 @@
+## Object Oriented Design Principles
+
+The SOLID principles of Object Oriented Design include these five principles:
+- SRP – Single Responsibility Principle
+- OCP – Open/Closed Principle
+- LSP – Liskov Substitution Principle
+- ISP – Interface Segregation Principle
+- DIP – Dependency Inversion Principle
+
+Full details - https://deviq.com/solid/
+
 ## References
 
 https://www.geeksforgeeks.org/tag/object-oriented-design/
