@@ -23,5 +23,16 @@ Output :
  */
 
 public class MaxEachRowMatrix {
-
+      public static void main(String[] args) {
+        int[][] array = {{1,2,3}, {1,4,9}, {76,34,21}};
+        int[] output = new int[3];
+        for(int i = 0; i< array.length; i++){
+            int rowTop = 0;
+            for(int j = 0 ; j < array.length ; j ++){
+                rowTop = Math.max(rowTop, array[i][j]);
+            }
+            output[i] = rowTop;
+        }
+        System.out.println(Arrays.toString(output));
+    }
 }
