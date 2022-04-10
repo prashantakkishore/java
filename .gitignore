@@ -1,4 +1,8 @@
 **/bin
+**/out
+**/.idea
+**/.DS_Store
+**/*.iml
 **/.metadata
 **/.recommenders
 /JavaWebSocket/nbproject/private/
