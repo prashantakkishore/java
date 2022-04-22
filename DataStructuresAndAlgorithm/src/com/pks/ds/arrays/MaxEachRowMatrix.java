@@ -1,5 +1,7 @@
 package com.pks.ds.arrays;
 
+import java.util.Arrays;
+
 /**
  * Input :  [1, 2, 3]
          	[1, 4, 9]
@@ -18,7 +20,7 @@ Output :
 65
 56
 
- * 
+ *
  *
  */
 

@@ -1,12 +1,12 @@
 package com.pks.ds.tree.BST;
 
 import com.pks.ds.tree.TreeNode;
-import com.pks.ds.tree.BT.InOrder;
+import com.pks.ds.tree.BT.traversal.InOrder;
 /**
-* 
+*
 * Input : 1 2 3 4 5 6 7 8 9
-* 
-* Output : 
+*
+* Output :
 *	 			    5
 *	 			 /    \
 *	 		   2	    7
@@ -16,10 +16,6 @@ import com.pks.ds.tree.BT.InOrder;
 *  					4		 9
 */
 public class BuildBST {
-	
-	public static TreeNode sortedArrayToBST(int[] arr){
-		return sortedArrayToBST(arr, 0, arr.length - 1);
-	}
 
 	public static TreeNode sortedArrayToBST(int[] arr, int start, int end) {
 

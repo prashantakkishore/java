@@ -1,4 +1,4 @@
-package com.pks.ds.tree.BT;
+package com.pks.ds.tree.BT.traversal;
 
 import java.util.Stack;
 
@@ -6,16 +6,16 @@ import com.pks.ds.tree.TreeBase;
 import com.pks.ds.tree.TreeNode;
 
 /**
- * 
- * Input : 
+ *
+ * Input :
  * 			    1
  * 			 /    \
  * 		   2	    3
  * 		 /   \    /   \
  * 	   4	  5	 6	   7
- * 
+ *
  * Output : 4 5 2 6 7 3 1
- * 
+ *
  */
 
 public class PostOrder extends TreeBase {
@@ -30,7 +30,7 @@ public class PostOrder extends TreeBase {
 	}
 
 	/**  TODO Not working
-	 * 
+	 *
 	 * @param root
 	 */
 	public static void iterative(TreeNode root) {

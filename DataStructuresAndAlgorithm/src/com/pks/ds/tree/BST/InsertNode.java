@@ -1,13 +1,13 @@
 package com.pks.ds.tree.BST;
 
 import com.pks.ds.tree.TreeNode;
-import com.pks.ds.tree.BT.InOrder;
+import com.pks.ds.tree.BT.traversal.InOrder;
 /**
-* 
+*
 * Input : 1 2 3 4 5 6 7 8 9
 * Insert : 10
-* 
-* Output : 
+*
+* Output :
 *	 			    5
 *	 			 /    \
 *	 		   2	    7
@@ -16,7 +16,7 @@ import com.pks.ds.tree.BT.InOrder;
 *				   \		\
 *  					4		 9
 *  							  \
-*  							   10	
+*  							   10
 */
 public class InsertNode extends BSTBase {
 

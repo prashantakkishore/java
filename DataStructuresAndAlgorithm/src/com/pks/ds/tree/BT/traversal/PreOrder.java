@@ -1,4 +1,4 @@
-package com.pks.ds.tree.BT;
+package com.pks.ds.tree.BT.traversal;
 
 import java.util.Stack;
 
@@ -6,57 +6,51 @@ import com.pks.ds.tree.TreeBase;
 import com.pks.ds.tree.TreeNode;
 
 /**
- * Input : 
+ *
+ * Input :
  * 			    1
  * 			 /    \
  * 		   2	    3
  * 		 /   \    /   \
  * 	   4	  5	 6	   7
- * 
- * Output : 4 2 5 1 6 3 7
- * 
+ *
+ * Output :
+ * 1 2 4 5 3 6 7
+ *
  */
 
-public class InOrder extends TreeBase {
+public class PreOrder extends TreeBase {
 
 	public static void recursive(TreeNode root) {
 		if (root != null) {
-			recursive(root.getLeft());
 			System.out.print(root.getData() + " ");
+			recursive(root.getLeft());
 			recursive(root.getRight());
 		}
 	}
 
 	/**
 	 * Use Stack for processing nodes
-	 * 
 	 * @param root
 	 */
 	public static void iterative(TreeNode root) {
 
 		Stack<TreeNode> stack = new Stack<>();
-		boolean done = false;
-		
-		while (!done) {
-			
-			if (root != null) {
-				stack.push(root);
-				root = root.getLeft();
-			} else {
-				if (stack.empty())
-					done = true;
-				else {
-					root = stack.pop();
-					System.out.print(root.getData() + " ");
-					root = root.getRight();
-				}
-			}
+		stack.push(root);
+
+		while (!stack.isEmpty()) {
+			TreeNode node = stack.pop();
+			System.out.println(node.getData());
+			if (node.getRight() != null)
+				stack.push(node.getRight());
+			if (node.getLeft() != null)
+				stack.push(node.getLeft());
+
 		}
 	}
 
 	public static void main(String[] args) {
 		recursive(root);
-		System.out.println("\n");
 		iterative(root);
 	}
 

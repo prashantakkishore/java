@@ -7,8 +7,15 @@ import com.pks.ds.sorting.SortBase;
 
 public class ArrayHasDuplicates extends SortBase {
 
+	public static void main(String args[]) {
+		int[] arr = { 4, 2, 4, 5, 2, 3, 1 };
+		isDuplicate_by_negation(arr);
+		int[] arr2 = { 80, 20, 30, 10, 90, 60, 0, 70, 40, 20, 10 };
+		isDuplicate_by_hashing(arr2);
+
+	}
 	/**
-	 * Array of n+2 elements 
+	 * Array of n+2 elements
 	 * Elements of the array are in range 1 to n
 	 * Time Complexity: O(n)
 	 * Auxiliary Space: O(1)
@@ -41,11 +48,5 @@ public class ArrayHasDuplicates extends SortBase {
 
 	}
 
-	public static void main(String args[]) {
-		int[] arr = { 4, 2, 4, 5, 2, 3, 1 };
-		isDuplicate_by_negation(arr);
-		int[] arr2 = { 80, 20, 30, 10, 90, 60, 0, 70, 40, 20, 10 };
-		isDuplicate_by_hashing(arr2);
 
-	}
 }

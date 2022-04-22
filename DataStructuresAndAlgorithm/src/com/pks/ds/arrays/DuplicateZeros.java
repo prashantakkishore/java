@@ -1,6 +1,8 @@
 package com.pks.ds.arrays;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right.
@@ -17,7 +19,7 @@ import java.util.Arrays;
 public class DuplicateZeros {
 
     public static void main(String[] args) {
-        int[] nums = {1, 0, 2, 3, 0, 4, 5, 0};
+        int[] nums = {1, 0, 2, 3, 0, 4, 5, 0, 6, 7, 7, 0, 2, 0, 0, 0, 2, 0, 0};
         duplicateZeros(nums);
     }
 
@@ -59,6 +61,21 @@ public class DuplicateZeros {
             }
         }
         System.out.println(Arrays.toString(nums));
+    }
+
+    // If space O(1) is not the case
+    public static void   duplicateZerosQueue(int[] arr) {
+        Queue<Integer> q = new LinkedList<>();
+
+        for(int i=0; i<arr.length; i++){
+            q.add(arr[i]);
+
+            if(arr[i] == 0)
+                q.add(0);
+
+            arr[i] = q.remove();
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 }

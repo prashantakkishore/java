@@ -10,13 +10,15 @@ import java.util.Stack;
  * day. For example, if an array of 7 days prices is given as {100, 80, 60, 70,
  * 60, 75, 85}, then the span values for corresponding 7 days are {1, 1, 1, 2,
  * 1, 4, 6}
- * 
- * @author Prashantak
+ *
+ * Expanin: Stock price before the price given is less or equal than that including it.
+ * Eg: for index 2 - num 60 span is 1 (only 60)
+ * for index 3 - num 70 span is 2 (70 and 60)
  *
  */
 
 public class StockSpan {
-	
+
 	// a linear time solution for stock span problem
 	// A stack based efficient method to calculate stock span values
 	static void calculateSpan(int price[], int n, int S[]) {
@@ -29,7 +31,7 @@ public class StockSpan {
 
 		// Calculate span values for rest of the elements
 		for (int i = 1; i < n; i++) {
-			// Remove previous greater with current if , current is greater then pop previous as 
+			// Remove previous greater with current if , current is greater then pop previous as
 			// next will match to greater and it will never touch currents less.
 			while (!st.empty() && price[st.peek()] <= price[i])
 				st.pop();
