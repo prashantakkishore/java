@@ -3,7 +3,7 @@ package com.pks.ds.sorting.problems;
 import com.pks.ds.sorting.SortBase;
 
 /**
- * Input :  {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} 
+ * Input :  {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
  * Output : {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
  *
  */
@@ -68,7 +68,7 @@ public class SortArrayOf012 extends SortBase {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+		int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 2 };
 		sort(arr);
 		print(arr);
 		print(counting_sort(arr));
