@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.pks.oop.design.logistics</OriginalElement>
+  <nodes>
+    <node x="0.0" y="562.0">com.pks.oop.design.logistics.VehicleStatus</node>
+    <node x="195.0" y="562.0">com.pks.oop.design.logistics.OrderPriority</node>
+    <node x="399.0" y="0.0">com.pks.oop.design.logistics.Order</node>
+    <node x="66.0" y="0.0">com.pks.oop.design.logistics.Vehicle</node>
+    <node x="492.0" y="375.0">com.pks.oop.design.logistics.LogisticsSystem</node>
+    <node x="0.0" y="705.0">com.pks.oop.design.logistics.Location</node>
+    <node x="289.0" y="375.0">com.pks.oop.design.logistics.User</node>
+    <node x="390.0" y="562.0">com.pks.oop.design.logistics.OrderStatus</node>
+    <node x="202.0" y="705.0">com.pks.oop.design.logistics.PaymentStatus</node>
+    <node x="397.0" y="705.0">com.pks.oop.design.logistics.Apptest</node>
+    <node x="191.0" y="234.0">com.pks.oop.design.logistics.Bike</node>
+    <node x="569.0" y="562.0">com.pks.oop.design.logistics.PaymentMode</node>
+    <node x="0.0" y="375.0">com.pks.oop.design.logistics.PaymentDetails</node>
+    <node x="727.0" y="375.0">com.pks.oop.design.logistics.Item</node>
+    <node x="0.0" y="234.0">com.pks.oop.design.logistics.Truck</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.pks.oop.design.logistics.Bike" target="com.pks.oop.design.logistics.Vehicle">
+      <point x="0.0" y="-48.0" />
+      <point x="272.5" y="209.0" />
+      <point x="235.5" y="209.0" />
+      <point x="56.5" y="92.0" />
+    </edge>
+    <edge source="com.pks.oop.design.logistics.Truck" target="com.pks.oop.design.logistics.Vehicle">
+      <point x="0.0" y="-48.0" />
+      <point x="85.5" y="209.0" />
+      <point x="122.5" y="209.0" />
+      <point x="-56.5" y="92.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0509275089593035" x="385.5267519467276" y="291.6294865326265" />
+  <SelectedNodes>
+    <node>com.pks.oop.design.logistics.PaymentDetails</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
