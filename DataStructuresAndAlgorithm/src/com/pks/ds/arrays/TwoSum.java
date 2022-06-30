@@ -23,8 +23,8 @@ public class TwoSum {
         int[] num = {3, 2, 4};
         int target = 6;
         //bruteForce(num,target);
-        //mapSolutionTwoPass(num,target);
-        mapSolutionOnePass(num, target);
+        mapSolutionTwoPass(num,target);
+//        mapSolutionOnePass(num, target);
     }
 
     //O(n2)

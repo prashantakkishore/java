@@ -1,4 +1,4 @@
-package com.pks.ds.greedy;
+package com.pks.ds.dp;
 
 /**
  * https://leetcode.com/problems/video-stitching/

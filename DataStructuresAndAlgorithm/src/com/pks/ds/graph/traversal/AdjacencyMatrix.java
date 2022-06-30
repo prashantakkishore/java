@@ -15,13 +15,13 @@ public class AdjacencyMatrix {
         adjMatrix = new boolean[numVertices][numVertices];
     }
 
-    // Add edges
+    // Add undirected edges
     public void addEdge(int i, int j) {
         adjMatrix[i][j] = true;
         adjMatrix[j][i] = true;
     }
 
-    // Remove edges
+    // Remove undirected edges
     public void removeEdge(int i, int j) {
         adjMatrix[i][j] = false;
         adjMatrix[j][i] = false;

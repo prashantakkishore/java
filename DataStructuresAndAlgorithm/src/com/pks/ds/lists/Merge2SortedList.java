@@ -2,6 +2,7 @@ package com.pks.ds.lists;
 
 public class Merge2SortedList {
 
+
 	public Node mergeTwoLists(Node l1, Node l2) {
 		Node head = new Node(0); //dummy node
 		Node p = head;

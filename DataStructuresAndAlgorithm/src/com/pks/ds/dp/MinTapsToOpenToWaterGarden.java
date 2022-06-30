@@ -1,4 +1,4 @@
-package com.pks.ds.greedy;
+package com.pks.ds.dp;
 
 /**
  * https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/
@@ -14,6 +14,7 @@ package com.pks.ds.greedy;
 public class MinTapsToOpenToWaterGarden {
 
     public static void main(String[] args) {
+
         System.out.println(minTaps(5, new int[]{2, 0, 1, 1, 0, 0}));
     }
 
