@@ -1,4 +1,4 @@
-package com.pks.ds.graph;
+package com.pks.ds.graph.traversal;
 
 import java.util.ArrayList;
 

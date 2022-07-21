@@ -16,8 +16,8 @@
     <node x="191.0" y="234.0">com.pks.oop.design.logistics.Bike</node>
     <node x="569.0" y="562.0">com.pks.oop.design.logistics.PaymentMode</node>
     <node x="0.0" y="375.0">com.pks.oop.design.logistics.PaymentDetails</node>
-    <node x="727.0" y="375.0">com.pks.oop.design.logistics.Item</node>
     <node x="0.0" y="234.0">com.pks.oop.design.logistics.Truck</node>
+    <node x="727.0" y="375.0">com.pks.oop.design.logistics.Item</node>
   </nodes>
   <notes />
   <edges>
@@ -34,7 +34,7 @@
       <point x="-56.5" y="92.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0509275089593035" x="385.5267519467276" y="291.6294865326265" />
+  <settings layout="Hierarchic Group" zoom="0.8177278401997503" x="426.5" y="390.5" />
   <SelectedNodes>
     <node>com.pks.oop.design.logistics.PaymentDetails</node>
   </SelectedNodes>

@@ -3,7 +3,8 @@ package com.pks.ds.recursion;
 public class IsPalindrome {
 
     public static void main(String[] args) {
-        System.out.println(palindrome("kayak"   ));
+
+        System.out.println(palindromeNoSubstring("kayak1"   , 0 , "kayak1".length() - 1));
     }
 
     public static boolean palindrome(String str) {
@@ -19,4 +20,17 @@ public class IsPalindrome {
         return false;
 
     }
+
+    public static boolean palindromeNoSubstring(String str, int l, int r) {
+        if (l >= r)
+            return true;
+
+        if (str.charAt(l) != str.charAt(r))
+            return false;
+
+        return palindromeNoSubstring(str, l + 1, r -1);
+
+
+    }
+
 }
