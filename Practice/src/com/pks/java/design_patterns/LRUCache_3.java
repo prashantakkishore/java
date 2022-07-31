@@ -8,12 +8,14 @@ import java.util.Map;
 public class LRUCache_3<K,V> {
 
     public static void main(String[] args) {
+        System.out.println("KB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024);
         LRUCache_3 cache = new LRUCache_3<Integer, Integer>(3);
         cache.put(2,20);
         cache.put(3,30);
         cache.put(4,40);
-        System.out.println(cache.get(2));
+        System.out.println("Value of key 2 is  - " + cache.get(2));
         cache.put(5,50);
+        System.out.println("KB: " + (double) (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024);
         cache.print();
     }
 
@@ -42,11 +44,14 @@ public class LRUCache_3<K,V> {
         Node value = map.get(key);
         if(value != null) {
             Node newValue = new Node(key, value.value);
+            /**
+             * This is giving O(n)
+             */
             deque.remove(value);
             deque.addFirst(newValue);
             map.put(key, newValue);
         }
-        return (V)value.value;
+        return value == null ? null : (V)value.value;
     }
 
     public void print(){
@@ -63,6 +68,14 @@ public class LRUCache_3<K,V> {
         Node(K key, V value){
             this.key = key;
             this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "key=" + key +
+                    ", value=" + value +
+                    '}';
         }
     }
 

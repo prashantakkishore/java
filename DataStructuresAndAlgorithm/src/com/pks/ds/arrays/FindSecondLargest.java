@@ -34,16 +34,17 @@ public class FindSecondLargest {
     }
 
     public static void  findSecondLargestPQ(int [] arr){
-        // default max heap , smaller will be removed.
-        PriorityQueue<Integer> pq = new PriorityQueue();
+        // default min , smaller will be removed.
+        PriorityQueue pq = new PriorityQueue();
         for (int i = 0; i < arr.length; i++) {
             pq.add(arr[i]);
-            if (pq.size() > 2)
+            if (pq.size() > 2){
                 pq.remove();
-
+            }
         }
-        int sum = pq.stream().reduce(0, Integer::sum);
-        System.out.println(sum);
+
+        System.out.println("Second highest " + pq.remove());
+        System.out.println("Highest " + pq.remove());
     }
 
 }

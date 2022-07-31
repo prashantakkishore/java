@@ -15,19 +15,19 @@ public class MinTapsToOpenToWaterGarden {
 
     public static void main(String[] args) {
 
-        System.out.println(minTaps(5, new int[]{2, 0, 1, 1, 0, 0}));
+        System.out.println(minTaps(5, new int[]{3, 2, 1, 1, 1, 0}));
     }
 
 
-    public static int minTaps(int n, int[] ranges) {
+    public static int minTaps(int gardenLength, int[] ranges) {
 
         int min = 0;
         int max = 0;
         int taps = 0;
 
-        while(max < n) {
+        while(max < gardenLength) {
             for (int i = 0; i < ranges.length; i++) {
-                if (min <= (i - ranges[i]) && max < (i + ranges[i]))
+                if ((i - ranges[i]) <= min && (i + ranges[i]) > max)
                     max = (i + ranges[i]);
             }
             if (min == max) return -1;

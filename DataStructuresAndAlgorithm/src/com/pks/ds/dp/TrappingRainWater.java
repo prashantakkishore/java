@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/problems/trapping-rain-water/solution/
- * https://www.geeksforgeeks.org/trapping-rain-water/
+ * https://www.youtube.com/watch?v=UZG3-vZlFM4
  */
 public class TrappingRainWater {
 

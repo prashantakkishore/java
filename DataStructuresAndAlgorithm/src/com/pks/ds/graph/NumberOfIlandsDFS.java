@@ -7,7 +7,7 @@ public class NumberOfIlandsDFS {
         int[][] matrix = {
                 {1, 1, 0, 0, 0},
                 {0, 1, 0, 0, 1},
-                {1, 5, 0, 1, 1},
+                {1, 1, 0, 1, 1},
                 {0, 0, 0, 0, 0},
                 {1, 0, 1, 0, 1}
         };
@@ -34,6 +34,7 @@ public class NumberOfIlandsDFS {
 
     private static void dfs(int[][] matrix, int currRow, int currColumn, int totalRow, int totalColumn) {
 
+        // so we dont revisit
         matrix[currRow][currColumn] = 0;
 
         //left

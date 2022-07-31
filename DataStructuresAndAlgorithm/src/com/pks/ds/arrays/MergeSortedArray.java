@@ -65,9 +65,9 @@ public class MergeSortedArray {
     // Ideal -- start comparing from end
     public static void mergeCompareEnd(int[] nums1, int m, int[] nums2, int n) {
 
-        int p1 = m-1;
-        int p2 = n-1;
-        int num1Index = m+n-1;
+        int p1 = m - 1;
+        int p2 = n - 1;
+        int num1Index = m + n - 1;
 
         while (p2 >= 0 && p1 >= 0) {
             if (nums1[p1] > nums2[p2]) {

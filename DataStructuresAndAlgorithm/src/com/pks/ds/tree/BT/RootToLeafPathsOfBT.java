@@ -53,7 +53,7 @@ public class RootToLeafPathsOfBT extends TreeBase {
 
 		Stack<Object> stack = new Stack<>();
 		stack.push(root);
-		stack.add(root.getData() + "");
+		stack.push(root.getData() + "");
 
 		while (!stack.isEmpty()) {
 

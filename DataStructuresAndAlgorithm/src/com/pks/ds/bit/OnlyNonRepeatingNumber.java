@@ -16,6 +16,8 @@ public class OnlyNonRepeatingNumber {
     private static int findNonRepeating(int[] arr) {
         int res = 0;
         for (int i = 0; i < arr.length; i++) {
+            // XOR with same number is 0
+            // So remaining in result is the only missing number
             res = res ^ arr[i];
         }
         return res;

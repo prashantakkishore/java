@@ -11,7 +11,7 @@ public class InsertAtIndex {
         }
 
         System.out.println(Arrays.toString(intArr));
-        insertAtIndex(5, 20, intArr);
+        insertAtIndex(3, 20, intArr);
     }
 
     private static void insertAtIndex (int index, int num, int[] intArr){
