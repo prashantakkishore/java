@@ -6,28 +6,30 @@ import javax.jnlp.ClipboardService;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Basically we cant finish all courses if there is cycle in the graph.
+ * So just check for cycle.
+ */
+
 public class CourseSchedule {
-
-
 
     public static void main(String[] args) {
         CourseSchedule.Graph g = new CourseSchedule.Graph(5);
 
         g.addEdge(0, 1);
-//        g.addEdge(0, 2);
-//        g.addEdge(1, 2);
+        // g.addEdge(0, 2);
+        // g.addEdge(1, 2);
         g.addEdge(2, 0);
-//        g.addEdge(2, 3);
+        // g.addEdge(2, 3);
         g.addEdge(3, 4);
         System.out.println(g.dfsDetectLoop(2));
     }
 
-
     static class Graph {
-        ArrayList<ArrayList<Integer>> lists ;
+        ArrayList<ArrayList<Integer>> lists;
         Integer vertex = 0;
 
-        public  Graph(Integer V){
+        public Graph(Integer V) {
             vertex = V;
             lists = new ArrayList<>(V);
             for (int i = 0; i < vertex; i++) {
@@ -35,15 +37,15 @@ public class CourseSchedule {
             }
         }
 
-        public void addEdge(Integer V1, Integer V2){
+        public void addEdge(Integer V1, Integer V2) {
             if (lists.get(V1) == null) {
                 lists.set(V1, new ArrayList());
             }
             lists.get(V1).add(V2);
         }
 
-        public boolean dfsDetectLoop(Integer startVertex){
-            boolean [] visited = new boolean[vertex];
+        public boolean dfsDetectLoop(Integer startVertex) {
+            boolean[] visited = new boolean[vertex];
             // for disconnected Graph
             for (int i = 0; i < vertex; i++) {
                 if (!visited[i]) {
@@ -55,7 +57,7 @@ public class CourseSchedule {
 
         }
 
-        public boolean dfsRecur(Integer startVertex, boolean [] visited, Integer parent){
+        public boolean dfsRecur(Integer startVertex, boolean[] visited, Integer parent) {
             if (visited[startVertex])
                 return true;
             else
@@ -65,9 +67,9 @@ public class CourseSchedule {
             while (itr.hasNext()) {
                 Integer V = itr.next();
                 if (!visited[V]) {
-                    if( dfsRecur(V, visited, startVertex))
+                    if (dfsRecur(V, visited, startVertex))
                         return true;
-                } else if(parent != V){ // not coming from parent
+                } else if (parent != V) { // not coming from parent
                     return true;
                 }
             }

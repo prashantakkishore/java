@@ -2,17 +2,16 @@ package com.pks.ds.graph;
 
 public class NumberOfIlandsDFS {
 
-
     public static void main(String[] args) {
         int[][] matrix = {
-                {1, 1, 0, 0, 0},
-                {0, 1, 0, 0, 1},
-                {1, 1, 0, 1, 1},
-                {0, 0, 0, 0, 0},
-                {1, 0, 1, 0, 1}
+                { 1, 1, 0, 0, 0 },
+                { 0, 1, 0, 0, 1 },
+                { 1, 1, 0, 1, 1 },
+                { 0, 0, 0, 0, 0 },
+                { 1, 0, 1, 0, 1 }
         };
         System.out.println(matrix[2][1]);
-//        countIlands(matrix);
+        countIlands(matrix);
 
     }
 
@@ -22,13 +21,13 @@ public class NumberOfIlandsDFS {
         int ilands = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                if(matrix[i][j] == 1){
+                if (matrix[i][j] == 1) {
                     ilands++;
                     dfs(matrix, i, j, row, column);
                 }
             }
         }
-        System.out.println("Ilands "+ ilands);
+        System.out.println("Ilands " + ilands);
 
     }
 
@@ -37,27 +36,27 @@ public class NumberOfIlandsDFS {
         // so we dont revisit
         matrix[currRow][currColumn] = 0;
 
-        //left
-        if (needsCheck(matrix, currRow, currColumn -1 , totalRow, totalColumn))
-            dfs(matrix, currRow, currColumn -1 , totalRow, totalColumn);
-        //right
-        if (needsCheck(matrix, currRow, currColumn +1 , totalRow, totalColumn))
-            dfs(matrix, currRow, currColumn +1 , totalRow, totalColumn);
-        //top
-        if (needsCheck(matrix, currRow -1, currColumn , totalRow, totalColumn))
-            dfs(matrix, currRow -1 , currColumn , totalRow, totalColumn);
-        //bottom
-        if (needsCheck(matrix, currRow +1, currColumn , totalRow, totalColumn))
-            dfs(matrix, currRow +1 , currColumn , totalRow, totalColumn);
+        // left
+        if (needsCheck(matrix, currRow, currColumn - 1, totalRow, totalColumn))
+            dfs(matrix, currRow, currColumn - 1, totalRow, totalColumn);
+        // right
+        if (needsCheck(matrix, currRow, currColumn + 1, totalRow, totalColumn))
+            dfs(matrix, currRow, currColumn + 1, totalRow, totalColumn);
+        // top
+        if (needsCheck(matrix, currRow - 1, currColumn, totalRow, totalColumn))
+            dfs(matrix, currRow - 1, currColumn, totalRow, totalColumn);
+        // bottom
+        if (needsCheck(matrix, currRow + 1, currColumn, totalRow, totalColumn))
+            dfs(matrix, currRow + 1, currColumn, totalRow, totalColumn);
 
     }
 
-    private static boolean needsCheck(int[][] matrix, int currRow, int currColumn, int totalRow, int totalColumn){
+    private static boolean needsCheck(int[][] matrix, int currRow, int currColumn, int totalRow, int totalColumn) {
         // no outof bound, and value is 1
-        if(currRow >= 0 && currRow < totalRow && currColumn >= 0 && currColumn < totalColumn && matrix[currRow][currColumn] == 1)
+        if (currRow >= 0 && currRow < totalRow && currColumn >= 0 && currColumn < totalColumn
+                && matrix[currRow][currColumn] == 1)
             return true;
         return false;
     }
-
 
 }
