@@ -1,5 +1,7 @@
 package com.pks.ds.graph.traversal;
-
+/**
+ * Used for dependent tasks, like if short is 2->0-> 1 then to start 0 , 2 should be finished.
+ */
 import java.util.*;
 
 public class TopologicalSortBFSKahnAlgo {

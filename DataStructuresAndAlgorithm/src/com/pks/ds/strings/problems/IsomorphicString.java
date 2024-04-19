@@ -16,11 +16,11 @@ public class IsomorphicString {
     }
 
     // O(n)
-    public static boolean isIsomorphic(String str1 , String str2){
-        if(str1.length() != str2.length())
+    public static boolean isIsomorphic(String str1, String str2) {
+        if (str1.length() != str2.length())
             return false;
         Map<Character, Character> mapping = new HashMap();
-        for(int i = 0 ; i < str1.length(); i ++) {
+        for (int i = 0; i < str1.length(); i++) {
             if (!mapping.containsKey(str1.charAt(i))) {
                 mapping.put(str1.charAt(i), str2.charAt(i));
             } else {

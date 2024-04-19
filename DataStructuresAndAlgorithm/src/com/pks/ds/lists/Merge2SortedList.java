@@ -1,33 +1,46 @@
 package com.pks.ds.lists;
 
+
 public class Merge2SortedList {
 
+	public static void main(String[] args) {
+		Node one = new Node(1, new Node(3, new Node(5, null)));
+		Node two = new Node(2, new Node(4, new Node(6, null)));
+		Node p = mergeTwoLists(one, two);
+		print(p);
+	}
 
-	public Node mergeTwoLists(Node l1, Node l2) {
-		Node head = new Node(0); //dummy node
-		Node p = head;
+	public static void print(Node p){
+		while (p != null) {
+			System.out.println(p.data);
+			p = p.next;
+		}
+	}
 
-		Node p1 = l1;
-		Node p2 = l2;
-		while (p1 != null && p2 != null) {
-			if (p1.data < p2.data) {
-				p.next = p1;
-				p1 = p1.next;
-			} else {
-				p.next = p2;
-				p2 = p2.next;
+	public static Node mergeTwoLists(Node l1, Node l2){
+		Node dummy = new Node(-1, null);
+		Node p = dummy;
+		while (l1 != null && l2 != null) {
+			if (l1.data < l2.data) {
+				p.next = l1;
+				l1 = l1.next;
+			} else if (l1.data > l2.data) {
+				p.next = l2;
+				l2 = l2.next;
 			}
 			p = p.next;
 		}
+		return dummy.next;
 
-		if (p1 != null) {
-			p.next = p1;
-		}
-
-		if (p2 != null) {
-			p.next = p2;
-		}
-
-		return head.next;
 	}
+
+	static class Node{
+		int data;
+		Node next;
+		Node(int data, Node next){
+			this.data = data;
+			this.next = next;
+		}
+	}
+
 }

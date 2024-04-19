@@ -15,8 +15,8 @@ import java.util.Set;
 public class LongestSubstringNoDuplicates {
 
     public static void main(String[] args) {
-        String str = "abbcbabcbb";
-        System.out.println(longestSubstringNoDuplicates(str));
+        String str = "pwwkew";
+        System.out.println(longestSubstringNoDuplicates_Practice(str));
     }
 
     private static int longestSubstringNoDuplicates(String str) {
@@ -38,5 +38,24 @@ public class LongestSubstringNoDuplicates {
         }
 
         return total;
+    }
+
+    private static int longestSubstringNoDuplicates_Practice(String str){
+
+        Set<Character> set = new HashSet<>();
+        int start = 0;
+        int longest = 0;
+        while(start < str.length()){
+            if(set.contains(str.charAt(start))){
+                set.clear();
+            } else {
+                set.add(str.charAt(start));
+                longest = Math.max(set.size(), longest);
+
+            }
+            start++;
+        }
+
+        return longest;
     }
 }
