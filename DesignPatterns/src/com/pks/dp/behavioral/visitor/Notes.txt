@@ -1,0 +1,1 @@
+When operations needs to be separated out from implementation.

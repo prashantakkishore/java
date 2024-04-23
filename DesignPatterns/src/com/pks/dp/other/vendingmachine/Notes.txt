@@ -1,0 +1,2 @@
+Uses State design pattern.
+When different operations needed depending on its state.

@@ -1,0 +1,2 @@
+This use State design pattern overall.
+Also uses Chain Of responsibility for amount withdrawal process.
