@@ -1,0 +1,2 @@
+Separate impl from abstraction. So both can grow independently.
+Very similar to Strategy Design Pattern.

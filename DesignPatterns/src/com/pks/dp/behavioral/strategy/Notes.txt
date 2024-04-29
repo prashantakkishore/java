@@ -1,0 +1,2 @@
+When children don't use parent impl and duplicates code in children, create a strategy and assign to
+child at runtime rather having in parent class.
