@@ -1,0 +1,5 @@
+Creating proxy for real object, used for -
+    - Caching
+    - Blocking request
+    - Auth check
+    - Pre/Post Processing.
