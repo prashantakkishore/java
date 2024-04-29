@@ -1,0 +1,3 @@
+Used when memory is limited.
+- When objects share data.
+- Creation of objects is expensive.

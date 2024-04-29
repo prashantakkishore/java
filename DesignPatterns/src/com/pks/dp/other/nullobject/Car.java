@@ -1,6 +1,6 @@
 package com.pks.dp.other.nullobject;
 
-public class Car implements Vehicle{
+public class Car implements Vehicle {
 
     @Override
     public int getTankCapacity() {
