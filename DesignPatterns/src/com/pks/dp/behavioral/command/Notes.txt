@@ -1,0 +1,4 @@
+Seprate operation/command from object. It solves
+ - Lack of abstraction - Client should know what all needs to do for eg: turn on ac.
+ - Undo/Redo functionality
+ - Maintenance issue
