@@ -18,49 +18,39 @@ public class SetMaxZeros {
 
     public static void main(String[] args) {
         int[][] arr = {{1,1,1}, {1,0,1}, {1,1,1}};
-        System.out.println(Arrays.deepToString(setMaxZeros(arr)));
+        System.out.println(Arrays.deepToString(setMaxZerosExtraSpace(arr)));
     }
 
-    // WRONG ---
-    public static int[][] setMaxZeros(int[][] arr){
-        int length = arr.length;
-        int left, right, up, down = 0;
-
-
-        for (int i = 0; i < arr.length; i++) {
-
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[i][j] == 0 && (i == 1 && j == 1)) { // WRONG --- If second condition not there
-                    // it will fail as converted zeros will also mark row and column as zero. So we need
-                    // to identify which was the original zero and which was converted
-
-                    // loop till 1,1 ->
-                    // up - 0 -> J-1 -> 0,I
-                    // down - length -1 -> I+1 -> L,J
-                    // left - 0 -> I,J -1 -> 0
-                    // right - length -1 -> I,J -1 -> L
-
-                    up = i - 1;
-                    while (up >= 0) {
-                        arr[up--][j] = 0;
-                    }
-                    down = i + 1;
-                    while (down <= length - 1) {
-                        arr[down++][j] = 0;
-                    }
-                    left = j - 1;
-                    while (left >= 0) {
-                        arr[i][left--] = 0;
-                    }
-                    right = j + 1;
-                    while (right <= length - 1) {
-                        arr[i][right++] = 0;
-                    }
-
+    // Space O(N) + O(M)
+    // Time O(2*(N*M))
+    public static int[][] setMaxZerosExtraSpace(int[][] arr){
+        int rows = arr.length;
+        int cols = arr[0].length;
+        boolean zeroRows[] = new boolean[rows];
+        boolean zeroCols[] = new boolean[cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (arr[i][j] == 0){
+                    zeroRows[i] = true;
+                    zeroCols[j] = true;
                 }
             }
-
         }
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (zeroRows[i] || zeroRows[j]){
+                    arr[i][j] = 0;
+                }
+            }
+        }
+        return arr;
+    }
+
+    // Space O(1)
+    // Time O(2*(N*M))
+    public static int[][] setMaxZeros(int[][] arr){
+
         return arr;
     }
 }

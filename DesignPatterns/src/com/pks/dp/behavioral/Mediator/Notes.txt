@@ -1,0 +1,4 @@
+Objects dont commnicate directly but through mediator.
+
+Eg : 1 - Auction Syatem
+     2 - Airline system
