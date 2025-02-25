@@ -13,7 +13,7 @@ public class NthFromLast {
 		while (count < n) {
 			refPtr = refPtr.next;
 			count++;
-			if (refPtr == null && n != 0)
+			if (refPtr == null)
 				return -1;
 		}
 

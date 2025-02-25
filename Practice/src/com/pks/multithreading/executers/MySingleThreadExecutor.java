@@ -1,5 +1,10 @@
 package com.pks.multithreading.executers;
 
+/**
+ * 1 - One one thread will be running tasks
+ * 2 - Used to run Tasks in sequncial manner that it was submitted
+ *
+ */
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;

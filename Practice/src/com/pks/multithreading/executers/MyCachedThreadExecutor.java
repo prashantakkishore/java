@@ -15,7 +15,7 @@ import com.pks.multithreading.RunnableTask;
  */
 /**
  * 1 - Starts with 0 threads and creates if needed
- * 2 - terminate thread after 60s idle/running
+ * 2 - terminate thread after 60s idle
  * 3 - Used for short lived tasks
  */
 
